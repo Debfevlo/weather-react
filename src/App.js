@@ -22,7 +22,7 @@ export default function App() {
 
   function handleSubmit(event){
     event.preventDefault();
-    let apiUrl = `http://api.weatherapi.com/v1/current.json?key=apiKey&q=${city}&aqi=no`
+    let apiUrl = `http://api.weatherapi.com/v1/current.json?key=apiKey&q=${city}&aqi={apiKey}`
     axios.get(apiUrl).then(getTemperature);
 
    
@@ -39,6 +39,7 @@ export default function App() {
       </form>
 
       <h2> {message}</h2>
+      <a href='https://github.com/Debfevlo/weather-react' target='_blank' rel='noreferrer'>open-source code </a>
     </div>
   );
 }
